@@ -1,0 +1,209 @@
+@import 'bootstrap/bootstrap';
+@import 'bootstrap/variables';
+@import 'bootstrap/mixins';
+
+$font-primary: 'Lato',Arial, sans-serif;
+$primary: #ff5959;
+
+body{
+	font-family: $font-primary;
+	font-size: 16px;
+	line-height: 1.8;
+	font-weight: normal;
+	background: #f8f9fd;
+	color: lighten($black,50%);
+}
+a {
+	transition: .3s all ease;
+	color: $primary;
+	&:hover, &:focus {
+		text-decoration: none !important;
+		outline: none !important;
+		box-shadow: none;
+	}
+}
+h1, h2, h3, h4, h5,
+.h1, .h2, .h3, .h4, .h5 {
+	line-height: 1.5;
+	font-weight: 400;
+	font-family: $font-primary;
+	color: $black;
+}
+
+.bg-primary{
+	background: $primary !important;
+}
+
+.ftco-section{
+	padding: 7em 0;
+}
+
+.ftco-no-pt{
+	padding-top: 0;
+}
+.ftco-no-pb{
+	padding-bottom: 0;
+}
+//HEADING SECTION
+.heading-section{
+	font-size: 28px;
+	color: $black;
+}
+
+//COVER BG
+.img{
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: center center;
+}
+
+
+.noselect {
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+.dropdown-container{
+  width: 100%;
+  margin: auto 0;
+  font-size: 14px;
+  font-family: sans-serif;
+  overflow: auto;
+  border-radius: 5px;
+
+  -webkit-box-shadow: 0px 10px 30px -4px rgba(0,0,0,0.15);
+	-moz-box-shadow: 0px 10px 30px -4px rgba(0,0,0,0.15);
+	box-shadow: 0px 10px 30px -4px rgba(0,0,0,0.15);
+}
+
+.dropdown-button {
+  float: left;
+  width: 100%;
+  background: $white;
+  padding: 15px 20px;
+
+  cursor: pointer;
+  border: none;
+  box-sizing: border-box;
+
+  
+  .dropdown-label, .dropdown-quantity {
+    float: left;
+    color: lighten($black,50%);
+    font-weight: 700;
+  }
+  
+  .dropdown-quantity {
+    margin-left: 4px;
+    color: $primary;
+  }
+  
+  .fa {
+  	margin-top: 3px;
+    float: right;
+    font-size: 16px;
+    color: $primary;
+  }
+}
+
+.dropdown-list {
+  float: left;
+  width: 100%;
+
+  border-top: none;
+  box-sizing: border-box;
+  padding: 10px 20px;
+
+  background: $white;
+
+  
+  input[type="search"] {
+    padding: 5px 10px;
+    width: 100%;
+    // border: 1px solid rgba(0,0,0,.1);
+    border: none;
+    border-radius: 4px;
+    background: rgba(0,0,0,.05);
+		&:focus{
+			box-shadow: none;
+			outline: none;
+		}
+  }
+  
+  ul {
+    margin: 20px 0 0 0;
+    max-height: 200px;
+    overflow-y: auto;
+    padding: 0;
+    
+    input[type="checkbox"] {
+      position: relative;
+      top: 2px;
+    }
+    li{
+    	list-style: none;
+    }
+  }
+}
+
+.checkbox-wrap {
+  display: block;
+  position: relative;
+  padding-left: 35px;
+  margin-bottom: 12px;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: 500;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+/* Hide the browser's default checkbox */
+.checkbox-wrap input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+
+/* Create a custom checkbox */
+.checkmark {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+
+/* Create the checkmark/indicator (hidden when not checked) */
+.checkmark:after {
+  content: "\f0c8";
+  font-family: "FontAwesome";
+  position: absolute;
+  color:rgba(0,0,0,.1);
+  font-size: 20px;
+  margin-top: -4px;
+  @include transition(.3s);
+
+}
+
+/* Show the checkmark when checked */
+.checkbox-wrap{
+	input:checked ~ .checkmark:after {
+	  display: block;
+	  content: "\f14a";
+	  font-family: "FontAwesome";
+	  color: $primary;
+	  border: none;
+	}
+}
+
+
+
+
